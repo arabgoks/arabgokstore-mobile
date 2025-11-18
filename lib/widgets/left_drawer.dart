@@ -1,3 +1,4 @@
+import 'package:arabgokstore_mobile/screens/product_entry_list.dart';
 import 'package:flutter/material.dart';
 import 'package:arabgokstore_mobile/screens/menu.dart';
 import 'package:arabgokstore_mobile/screens/productlist_form.dart';
@@ -18,7 +19,7 @@ class LeftDrawer extends StatelessWidget {
             child: Column(
               children: [
                 Text(
-                  'Dribble Zone',
+                  'ArabgokStore',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 30,
@@ -28,7 +29,7 @@ class LeftDrawer extends StatelessWidget {
                 ),
                 Padding(padding: EdgeInsets.all(10)),
                 Text(
-                  "Seluruh produk olahraga terkini di sini!",
+                  "All products you need in one place",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 15,
@@ -66,7 +67,17 @@ class LeftDrawer extends StatelessWidget {
             },
           ),
           // TODO: Buat ListTile baru untuk ke halaman melihat product
-          
+          ListTile(
+            leading: const Icon(Icons.add_reaction_rounded),
+            title: const Text('Product List'),
+            onTap: () {
+                // Route to product list page
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const ProductEntryListPage()),
+                );
+            },
+          ),
         ],
       ),
     );

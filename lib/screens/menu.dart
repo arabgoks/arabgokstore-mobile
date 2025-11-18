@@ -12,7 +12,7 @@ class MyHomePage extends StatelessWidget {
   final List<ItemHomepage> items = [
     ItemHomepage("All Products", Icons.list, Colors.blue),
     ItemHomepage("My Products", Icons.inventory, Colors.green),
-    ItemHomepage("Create Product", Icons.add_box, Colors.red),
+    ItemHomepage("Create Products", Icons.add_box, Colors.red),
   ];
 
   @override
@@ -21,7 +21,7 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       // AppBar adalah bagian atas halaman yang menampilkan judul.
       appBar: AppBar(
-        // Judul aplikasi "Football News" dengan teks putih dan tebal.
+        // Judul aplikasi "Football Product" dengan teks putih dan tebal.
         title: const Text(
           'ArabgokStore',
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
@@ -110,7 +110,9 @@ class InfoCard extends StatelessWidget {
       elevation: 2.0,
       child: Container(
         // Mengatur ukuran dan jarak di dalam kartu.
-        width: MediaQuery.of(context).size.width / 3.5, // menyesuaikan dengan lebar device yang digunakan.
+        width:
+            MediaQuery.of(context).size.width /
+            3.5, // menyesuaikan dengan lebar device yang digunakan.
         padding: const EdgeInsets.all(16.0),
         // Menyusun title dan content secara vertikal.
         child: Column(
